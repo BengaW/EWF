@@ -1,0 +1,89 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+Über die Platzhalter {{player.result}}, {{player.number_of_participants}} und {{player.mean_correct}} können sie im
+Template der Ergebnisseite auf die zu Beginn definierten und im Experimentverlauf gesetzten Variablen zugreifen.
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Basic line chart showing trends in a dataset. This chart includes the
+        <code>series-label</code> module, which adds a label to each line for
+        enhanced readability.
+    </p>
+</figure>
+
+
+<script>Highcharts.chart('container', {
+
+  title: {
+    text: 'Kaufbereitschaft auf einer Unbekannten Website Abhaengig von der Preisgestalung'
+  },
+
+  subtitle: {
+    text: 'Diese Umfrage'
+  },
+
+  yAxis: {
+    title: {
+      text: 'Rabatt'
+    }
+  },
+
+  xAxis: {
+    accessibility: {
+      rangeDescription: 'Range: 0 to 2017'
+    }
+  },
+
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+  },
+
+  plotOptions: {
+    series: {
+      label: {
+        connectorAllowed: false
+      },
+      pointStart: 0
+    }
+  },
+
+  series: [{
+    name: 'Anzahl Versuchsteilnehmer',
+    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+  }],
+
+  responsive: {
+    rules: [{
+      condition: {
+        maxWidth: 500
+      },
+      chartOptions: {
+        legend: {
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom'
+        }
+      }
+    }]
+  }
+
+});</script>
+    {% next_button %}
+{% endblock %}
+
+

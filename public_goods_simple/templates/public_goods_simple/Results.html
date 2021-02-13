@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        of which you contributed {{ player.contribution }}.
+        Your group contributed {{ group.total_contribution }},
+
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

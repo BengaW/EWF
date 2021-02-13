@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Please enter from which Website you would like to make the purchase.
+{% endblock %}
+
+{% block content %}
+
+
+    <img src="https://www.dropbox.com/s/b7txmv9l125mt58/2021-01-17%20at%2017.08.53.jpeg?dl=0" />
+   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATYAAACjCAMAAAA3vsLfAAAAbFBMVEX///8AAACkpKTa2tqpqalISEhbW1t8fHzq6uq8vLzLy8ttbW3w8PDBwcFWVlbi4uIbGxv29vaNjY1iYmKVlZWbm5u0tLQwMDAkJCTe3t4XFxdNTU0ICAiPj49oaGh/f384ODh1dXVCQkLJyck7lPidAAADk0lEQVR4nO3d6XbqIBSGYVOt1TqPnR3a+7/HDqfnCJjEAEn2wf0+P7sWrPItlBB2YqcDAAAAAAAAAAAAAAAAoHHdbe+mKb3hTHp4jdi+ZE073ksPsm43jWf24+Gqgps9tJPal5H0WOvz0VpoXx7H0sOtyaTN1L5cR25PLaeWPUqPuBavbcd2Fd9v+9ZTy7L019OxQGrZQXrU0ZYSsaU/3dr/Zvt2lB52pK5IalkmPe5ILW2qziS+r5dYR79NpAcepy8UW0964HFuiS0EsQUhtiDEFoTYghBbkKDYbteT2c+9xkG3NyK2Sua9hd3FJCR6bbFtczq5nxNbqekiv5sdsZW4K+znjtgK7Uo68tzcKoqt/MSJ2Ao8lfa0JbZcl47pnoktT/lk63Q2xJbjYLX7Lut6HVkHUDNiy7ExWo0Pv3+0PrjElsOcWae6LvPkzqeuUE1sRp2Q+S1mHEH5XPKqic1oZB5JG59dn1MwLbHNZ7O/+9GB+ff9qa83YisK73Z3XFqzyphtPuUkumI71z31xXdbZe9GX+/EVpVZy+HTTndsQ6Mrr+Il1bFZd8jXxFaNXTbk1VRxbHYlaY/YKrEr+xZ+jbXGNneeZeEsoYqDc/LntR6ojW3qdONdAqwyNvdYwb9wWmNsS6eTgEdCFMZ24/SxCuhDX2xDu4fF4XITYnMflxqEPX2kLTbntPQ+KDRtsc0HdnO/CgatscVe5OqM7cVpfAxOTVNsbnlbzN0TPbHt7ZZj/4JdjbFt7IaRz+9qic2pEI995YqW2Ozba161bJpjsy7YJqO7HHuPW5UqYyvg8ckltpMhsRFbGWILQmxBiC0IsQUhtiCBu4R8XLedmfYv8yin1BJbzRKP7ZHYAoQePCmPzfvVAMTW8a7lI7Y/pF6xmHhsUacoamMTWxDyX16TCrEFIen3FcstCNW2uP+p6OOncM/SY4/g9eKOerllrAkRXBBSfsmz4ILQlx57OJEfSvjFghDCLTVPidwOYSU99Ait/raVxX3wKCkhz2DUIumfHRJbEFLejIotCMuCN6mmQmKHsNsmHlr5grDsNuDpGn65r7jucTq83FqrQUFmr28JX783L/+hn2niPwfUuLyJtmaiXXBe4sJEq2DqhMZEq8LeIfQ/pP+fRBjvkHxeX8PlVDv+hbZiolX3uyDMN0w0Hz8Lwirh810RAyZaiH2fiRYg9Zs3AAAAAAAAAAAAQDo+AU0PP1D3PVNNAAAAAElFTkSuQmCC">
+    {% formfield 'decision10' %}
+
+    {% next_button %}
+
+{% endblock %}

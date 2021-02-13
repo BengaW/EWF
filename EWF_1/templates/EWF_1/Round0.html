@@ -1,0 +1,20 @@
+<!--Runde0 alles unbekannte Website deckt sich mit Amazon. Alle folgenden 10, 20,... sind entsprechend mit Rabatten von 10%, 20%,... versehen-->
+
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Please enter from which Website you would like to make the purchase.
+{% endblock %}
+
+{% block content %}
+ zour player id is {{player.id_in_group}}
+
+
+    <img src="https://www.dropbox.com/s/b7txmv9l125mt58/2021-01-17%20at%2017.08.53.jpeg?dl=0" />
+    <img src="https://www.dropbox.com/s/sj142c7hk84tzaw/2021-01-17_89.jpg?dl=0" >
+    {% formfield  'decision0' %}
+
+    {% next_button %}
+
+{% endblock %}

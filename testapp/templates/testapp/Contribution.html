@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    JUPJUP
+{% endblock %}
+
+{% block content %}
+    How much would you like to invest.
+    {% formfield player.contribution label='' %}
+    {% next_button %}
+
+{% endblock %}

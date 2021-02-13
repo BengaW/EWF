@@ -2,14 +2,14 @@
 {% load otree static %}
 
 {% block title %}
-    Results
+Results
 {% endblock %}
 
 {% block content %}
 Über die Platzhalter {{player.result}}, {{player.number_of_participants}} und {{player.mean_correct}} können sie im
 Template der Ergebnisseite auf die zu Beginn definierten und im Experimentverlauf gesetzten Variablen zugreifen.
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/series-label.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -24,66 +24,69 @@ Template der Ergebnisseite auf die zu Beginn definierten und im Experimentverlau
     </p>
 </figure>
 
+Meh :()
+{{ group.decision_counts }}
 
 <script>Highcharts.chart('container', {
 
-  title: {
-    text: 'Kaufbereitschaft auf einer Unbekannten Website Abhaengig von der Preisgestalung'
-  },
+        title: {
+            text: 'Kaufbereitschaft auf einer Unbekannten Website Abhaengig von der Preisgestalung'
+        },
 
-  subtitle: {
-    text: 'Diese Umfrage'
-  },
+        subtitle: {
+            text: 'Diese Umfrage'
+        },
 
-  yAxis: {
-    title: {
-      text: 'Rabatt'
-    }
-  },
+        yAxis: {
+            title: {
+                text: 'Anzahl Personen'
+            }
+        },
 
-  xAxis: {
-    accessibility: {
-      rangeDescription: 'Range: 0 to 2017'
-    }
-  },
+        xAxis: {
+            categories: ['0%', '10%', '20%', '30%', '40%', '50%', '60%'],
+            title: {
+                text: 'Rabatt'
+            },
+            accessibility: {
+                rangeDescription: 'Range: 0 to 60'
+            }
+        },
 
-  legend: {
-    layout: 'vertical',
-    align: 'right',
-    verticalAlign: 'middle'
-  },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
 
-  plotOptions: {
-    series: {
-      label: {
-        connectorAllowed: false
-      },
-      pointStart: 0
-    }
-  },
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 0
+            }
+        },
 
-  series: [{
-    name: 'Anzahl Versuchsteilnehmer',
-    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+        series: [{
+            data: js_vars.decision_counts
   }],
 
-  responsive: {
-    rules: [{
-      condition: {
-        maxWidth: 500
-      },
-      chartOptions: {
-        legend: {
-          layout: 'horizontal',
-          align: 'center',
-          verticalAlign: 'bottom'
-        }
-      }
-    }]
-  }
+        responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
 
 });</script>
-    {% next_button %}
+{% next_button %}
 {% endblock %}
-
-
